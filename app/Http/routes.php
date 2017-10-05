@@ -19,6 +19,7 @@
 
 // Route::get('/home', 'HomeController@index');
 
+Route::get('/', 'LoginController@login');
 Route::get('/login', 'LoginController@login');
 Route::get('/loginConfirm', 'LoginController@loginConfirm');
 Route::get('/loginConfirm2','LoginController@loginConfirm2'); 
