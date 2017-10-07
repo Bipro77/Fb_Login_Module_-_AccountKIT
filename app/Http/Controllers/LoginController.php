@@ -24,11 +24,6 @@ class LoginController extends Controller
         return view('loginConfirm');
     }
     
-     public function accountKit()
-    { 	
-    	
-        return view('accountKit');
-    }
 
     // session(['name' => 'null']);
      public function fbLogin2(Request $request)
@@ -159,14 +154,18 @@ class LoginController extends Controller
 				return redirect('\login');
 
 			}
-
-			// if($j > 0)
-			// {
-			// 	// Session::flash('message','Successfully Inserted');
-			// 	// return redirect('bookTable');
-			// }
 		}
 		//
+    }
+
+    public function accountKit()
+    { 	    	
+        return view('accountKit');
+    }
+
+    public function accountKitWelcome()
+    { 	    	
+        return view('accountKitWelcome');
     }
 
 }

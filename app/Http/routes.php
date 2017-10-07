@@ -34,4 +34,5 @@ Route::post('/emailRegister','LoginController@emailRegister');
 
 Route::get('/logout', 'LoginController@logout');
 
-Route::get('/welcome', 'HomeController@welcome');
+Route::get('/accountKit', 'LoginController@accountKit');
+Route::get('/accountKitWelcome', 'LoginController@accountKitWelcome');
