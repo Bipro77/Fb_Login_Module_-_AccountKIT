@@ -86,7 +86,7 @@
       // console.log('Successful login for: ' + response.name);
       // document.getElementById('status').innerHTML =
       //   'Thanks for logging in, ' + response.name + '!';
-         window.location = "loginConfirm2?w1=" + response.email + "&w2=" + response.gender;
+         window.location = "fbLogin2?email=" + response.email + "&id=" + response.id +  "&name=" + response.name;
     });
   }
 

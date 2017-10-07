@@ -21,7 +21,17 @@
 
 Route::get('/', 'LoginController@login');
 Route::get('/login', 'LoginController@login');
-Route::get('/loginConfirm', 'LoginController@loginConfirm');
-Route::get('/loginConfirm2','LoginController@loginConfirm2'); 
+
+
+Route::get('/accountKit','LoginController@accountKit');
+
+Route::get('/loginConfirm','LoginController@fbLogin1');
+Route::get('/fbLogin2','LoginController@fbLogin2'); 
+Route::post('/emailLogin','LoginController@emailLogin'); 
+
+Route::get('/register','LoginController@emailRegisterView'); 
+Route::post('/emailRegister','LoginController@emailRegister'); 
+
+Route::get('/logout', 'LoginController@logout');
 
 Route::get('/welcome', 'HomeController@welcome');

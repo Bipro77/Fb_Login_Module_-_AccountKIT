@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<?php 
+@extends('layouts.app')
 
-?>
-</body>
-</html>
+@section('content')
+
+<h2>Login Success</h2>
+<p>Name: {{ $name }} </p>
+<p>Email: {{ $email }}</p>
+<p>Login with: {{ $type }}</p>
+
+@endsection

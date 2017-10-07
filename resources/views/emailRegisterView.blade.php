@@ -10,8 +10,22 @@
                 @if(Session::has('message'))
 <p class="alert alert-info">{{ Session::get('message') }}</p>
 @endif
-                    <form class="form-horizontal" role="form" method="POST" action="{{action('LoginController@emailLogin')}}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{action('LoginController@emailRegister')}}">
                         {{ csrf_field() }}
+
+                        <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="name" class="form-control" name="name">
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail</label>
@@ -26,6 +40,8 @@
                                 @endif
                             </div>
                         </div>
+
+                        
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
