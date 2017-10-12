@@ -13,9 +13,10 @@ use Session;
 class LoginController extends Controller
 {
   
-    public function login()
+    public function login(Request $request)    
     { 	
-    	
+    	$request->session()->flush();
+
         return view('login');
     }
 
